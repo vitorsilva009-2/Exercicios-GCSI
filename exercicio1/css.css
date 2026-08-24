@@ -35,8 +35,21 @@ body {
   padding: 28px;
   border-radius: 16px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-
+.containerContent{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-between;
+}
+.imgGit{
+    width: 15%;
+}
 h1 {
   text-align: center;
   color: var(--cor-titulo);
@@ -47,7 +60,7 @@ h1 {
 .input-area {
   display: flex;
   gap: 8px;
-  margin-bottom: 16px;
+  margin-top: 16px;
 }
 
 #taskInput {
