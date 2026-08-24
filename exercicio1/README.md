@@ -1,0 +1,1 @@
+Código Criado com claude.Ai para aula de commits e versionamentos, criado com o intuito de aprendizado sobre o github e git e não sobre desenvolvimento de códigos
