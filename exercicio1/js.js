@@ -25,11 +25,20 @@ function adicionarTarefa() {
   // Cria o item da lista
   const item = document.createElement('li');
 
+  // Checkbox para marcar a tarefa como concluída
+  const checkbox = document.createElement('input');
+  checkbox.type = 'checkbox';
+  checkbox.classList.add('checkbox-tarefa');
+  checkbox.addEventListener('change', function () {
+    item.classList.toggle('concluida', checkbox.checked);
+  });
+
   const span = document.createElement('span');
   span.textContent = texto;
-  // Clicar no texto marca a tarefa como concluída
+  // Clicar no texto também marca a tarefa como concluída
   span.addEventListener('click', function () {
-    item.classList.toggle('concluida');
+    checkbox.checked = !checkbox.checked;
+    item.classList.toggle('concluida', checkbox.checked);
   });
 
   const botaoRemover = document.createElement('button');
@@ -40,6 +49,7 @@ function adicionarTarefa() {
     atualizarContador();
   });
 
+  item.appendChild(checkbox);
   item.appendChild(span);
   item.appendChild(botaoRemover);
   taskList.appendChild(item);
