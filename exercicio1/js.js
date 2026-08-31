@@ -3,6 +3,8 @@ const taskInput = document.getElementById('taskInput');
 const addBtn = document.getElementById('addBtn');
 const taskList = document.getElementById('taskList');
 const contador = document.getElementById('contador');
+const concluidasEl = document.getElementById('concluidas');
+const pendentesEl = document.getElementById('pendentes');
 
 // Adiciona uma tarefa ao clicar no botão
 addBtn.addEventListener('click', adicionarTarefa);
@@ -31,6 +33,7 @@ function adicionarTarefa() {
   checkbox.classList.add('checkbox-tarefa');
   checkbox.addEventListener('change', function () {
     item.classList.toggle('concluida', checkbox.checked);
+    atualizarContador();
   });
 
   const span = document.createElement('span');
@@ -39,6 +42,7 @@ function adicionarTarefa() {
   span.addEventListener('click', function () {
     checkbox.checked = !checkbox.checked;
     item.classList.toggle('concluida', checkbox.checked);
+    atualizarContador();
   });
 
   const botaoRemover = document.createElement('button');
@@ -61,5 +65,11 @@ function adicionarTarefa() {
 }
 
 function atualizarContador() {
-  contador.textContent = taskList.children.length;
+  const total = taskList.children.length;
+  const concluidas = taskList.querySelectorAll('li.concluida').length;
+  const pendentes = total - concluidas;
+
+  contador.textContent = total;
+  concluidasEl.textContent = concluidas;
+  pendentesEl.textContent = pendentes;
 }
