@@ -4,27 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lista de Tarefas</title>
-  <link rel="stylesheet" href="css.css">
-  <link rel="icon" type="img/png" href="img/logoGithub.png">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <div class="container">
-    <div class="containerContent">
     <h1>Minha Lista de Tarefas</h1>
-    <img src="./img/gitLogo.png" alt="Logo git" class="imgGit">
-    </div>
+
     <div class="input-area">
-    </div>
       <input type="text" id="taskInput" placeholder="Digite uma nova tarefa...">
       <button id="addBtn">Adicionar</button>
-   
+    </div>
 
     <ul id="taskList"></ul>
 
-    <p class="contador">Total de tarefas: <span id="contador">0</span></p>
+    <div class="estatisticas">
+      <p class="contador">Total de tarefas: <span id="contador">0</span></p>
+      <p class="stat-concluidas">Concluídas: <span id="concluidas">0</span></p>
+      <p class="stat-pendentes">A fazer: <span id="pendentes">0</span></p>
+    </div>
   </div>
 
-  <script src="js.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
