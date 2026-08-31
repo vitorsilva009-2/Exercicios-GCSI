@@ -35,21 +35,8 @@ body {
   padding: 28px;
   border-radius: 16px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
-.containerContent{
-    width: 100%;
-    height: 50px;
-    display: flex;
-    justify-items: center;
-    align-items: center;
-    justify-content: space-between;
-}
-.imgGit{
-    width: 15%;
-}
+
 h1 {
   text-align: center;
   color: var(--cor-titulo);
@@ -60,7 +47,7 @@ h1 {
 .input-area {
   display: flex;
   gap: 8px;
-  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 #taskInput {
@@ -117,6 +104,14 @@ h1 {
   flex: 1;
 }
 
+.checkbox-tarefa {
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+  cursor: pointer;
+  accent-color: var(--cor-primaria);
+}
+
 .remover {
   background-color: var(--cor-perigo);
   color: #ffffff;
@@ -138,4 +133,23 @@ h1 {
   text-align: center;
   color: var(--cor-texto-suave);
   font-size: 14px;
+}
+
+.estatisticas {
+  margin-top: 16px;
+  text-align: center;
+  color: var(--cor-texto-suave);
+  font-size: 14px;
+}
+
+.stat-concluidas {
+  color: var(--cor-primaria);
+  margin-top: 4px;
+}
+.imgGit{
+    width: 15%;
+}
+.stat-pendentes {
+  color: var(--cor-perigo);
+  margin-top: 4px;
 }
